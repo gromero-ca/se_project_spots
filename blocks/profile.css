@@ -2,7 +2,7 @@
   display: flex;
   padding: 34px 0 20px;
   max-width: 1280px;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .profile__avatar {
@@ -26,6 +26,9 @@
 
 .profile__description {
   margin: 0;
+  font-size: 16px;
+  opacity: 0.7;
+  font-weight: 500;
 }
 
 .profile__edit-btn {
@@ -38,6 +41,7 @@
   font-size: 16px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .profile__edit-btn:hover {
@@ -48,17 +52,19 @@
   margin-left: auto;
   margin-top: auto;
   background-color: #212121;
-  border-radius: 16px;
+  border-radius: 8px;
   height: 52px;
   padding: 0;
   width: 149px;
   color: white;
   align-items: end;
   transition: opacity 0.3s ease;
+  border: none;
 }
 
 .profile__add-btn:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
