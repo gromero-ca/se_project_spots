@@ -9,11 +9,12 @@
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   z-index: 1000;
-  display: none;
+  display: flex;
+  visibility: hidden;
 }
 
 .modal__is-opened {
-  display: flex;
+  visibility: visible;
 }
 
 .modal__container {
