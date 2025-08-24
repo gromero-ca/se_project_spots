@@ -17,8 +17,8 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const newPostForm = newPostModal.querySelector(".modal__form");
 
-const newPostTitleInput = newPostModal.querySelector("#card-title-input");
-const newPostUrlInput = newPostModal.querySelector("#card-url-input");
+const newPostTitleInput = newPostModal.querySelector("#caption-text-input");
+const newPostUrlInput = newPostModal.querySelector("#image-link-input");
 
 const profileNameEl = profile.querySelector(".profile__name");
 const profileDescriptionEl = profile.querySelector(".profile__description");
