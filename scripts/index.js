@@ -88,8 +88,6 @@ function handleAddCardSubmit(evt) {
   const name = newPostTitleInput.value.trim();
   const link = newPostUrlInput.value.trim();
 
-  if (!name || !link) return;
-
   const card = getCardElement({ name, link });
 
   cardsList.prepend(card);

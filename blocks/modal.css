@@ -51,7 +51,7 @@
 .modal__close-btn {
   background: transparent;
   border: 0;
-  background-image: url("/images/close.svg");
+  background-image: url("../images/close.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@
 }
 
 .modal__close-btn:hover {
-  background-image: url("/images/close-black.svg");
+  background-image: url("../images/close-black.svg");
 }
 
 .modal__close-btn:active {
@@ -126,10 +126,10 @@
   position: absolute;
   top: -5px;
   right: 5px;
-  background-image: url("/images/close.svg");
   height: 32px;
   width: 32px;
   padding: 0;
+  background-image: url("../images/close.svg");
 }
 
 .modal__image {

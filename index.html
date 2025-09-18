@@ -33,20 +33,12 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Avitor</p>
             <button type="button" class="profile__edit-btn">
-              <img
-                src="./images/pencil.svg"
-                alt="Pencil Icon"
-                class="profile__edit-icon"
-              />
+              <img src="./images/pencil.svg" alt="Pencil Icon" />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img
-              src="./images/plus.svg"
-              alt="Plus Icon"
-              class="profile__add-icon"
-            />
+            <img src="./images/plus.svg" alt="Plus Icon" />
             New Post
           </button>
         </section>
@@ -98,6 +90,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
               />
             </label>
             <label for="profile-description-input" class="modal__label">
@@ -107,6 +100,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your description"
+                required
               />
             </label>
             <button
@@ -133,6 +127,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
             </label>
             <label for="caption-text-input" class="modal__label">
@@ -142,6 +137,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
             </label>
             <button type="submit" class="modal__save-btn">Save</button>
