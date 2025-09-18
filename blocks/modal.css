@@ -112,6 +112,47 @@
   color: white;
 }
 
+.modal__container_type_preview {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.modal__container_type_preview .modal__close-btn {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  background-image: url("/images/close.svg");
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  margin: 0;
+  padding: 8px 12px;
+  max-width: 80vw;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
@@ -133,6 +174,14 @@
   }
   .modal__label {
     font-size: 16px;
+  }
+  .modal__image {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+  .modal__caption {
+    max-width: 90vw;
+    font-size: 14px;
   }
 }
 

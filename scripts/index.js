@@ -85,15 +85,71 @@ function handleProfileFormSubmit(evt) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log(newPostTitleInput.value);
-  console.log(newPostUrlInput.value);
+  const name = newPostTitleInput.value.trim();
+  const link = newPostUrlInput.value.trim();
+
+  if (!name || !link) return;
+
+  const card = getCardElement({ name, link });
+
+  cardsList.prepend(card);
+  newPostForm.reset();
   closeModal(newPostModal);
 }
 
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
 newPostForm.addEventListener("submit", handleAddCardSubmit);
 
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+
+  cardImage.addEventListener("click", () => {
+    previewCaptionEl.textContent = data.name;
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    openModal(previewModal);
+  });
+
+  likeButton.addEventListener("click", () => {
+    const icon = likeButton.querySelector(".card__like-icon");
+
+    if (likeButton.classList.toggle("card__like-button_active")) {
+      icon.src = "./images/like-red.svg";
+    } else {
+      icon.src = "./images/like.svg";
+    }
+  });
+
+  deleteButton.addEventListener("click", () => {
+    deleteButton.closest(".card").remove();
+  });
+
+  return cardElement;
+}
+
+const previewModal = document.querySelector("#preview-modal");
+const previewImageEl = previewModal.querySelector(".modal__image");
+const previewCaptionEl = previewModal.querySelector(".modal__caption");
+const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
+
+previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
+
+previewModal.addEventListener("click", (e) => {
+  if (e.target === previewModal) closeModal(previewModal);
+});
+
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+  const newCard = getCardElement(item);
+  cardsList.append(newCard);
 });

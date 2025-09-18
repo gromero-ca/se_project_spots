@@ -52,110 +52,32 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
+            <template id="card-template">
+              <li class="card">
+                <img src="#" alt="" class="card__image" />
                 <button
                   type="button"
-                  class="card__like-button"
-                  aria-label="Like"
+                  class="card__delete-button"
+                  aria-label="Delete"
                 >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
+                  <img src="./images/trash.svg" alt="Delete" />
                 </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restaurant terrace Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like"
-                >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like"
-                >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge, over the forest Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">
-                  A very long bridge, over the forest...
-                </h2>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like"
-                >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like"
-                >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain house Photo"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button
-                  type="button"
-                  class="card__like-button"
-                  aria-label="Like"
-                >
-                  <img src="./images/like.svg" alt="" class="card__like-icon" />
-                </button>
-              </div>
-            </li>
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button
+                    type="button"
+                    class="card__like-button"
+                    aria-label="Like"
+                  >
+                    <img
+                      src="./images/like.svg"
+                      alt=""
+                      class="card__like-icon"
+                    />
+                  </button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -224,6 +146,17 @@
             </label>
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="preview-modal">
+        <div class="modal__container modal__container_type_preview">
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="Close"
+          ></button>
+          <img class="modal__image" src="#" alt="" />
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>
