@@ -100,10 +100,6 @@
   border: 1px solid #212121;
 }
 
-.modal__input:not(:placeholder-shown) {
-  border: 1px solid #21212166;
-}
-
 .modal__save-btn {
   padding: 18px 32px;
   border-radius: 8px;
@@ -112,6 +108,7 @@
   border: 0;
   background-color: #212121;
   color: white;
+  cursor: pointer;
 }
 
 .modal__container_type_preview {
