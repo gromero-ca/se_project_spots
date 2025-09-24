@@ -83,6 +83,7 @@
   font-weight: 500;
   color: #212121b2;
   gap: 8px;
+  line-height: 120%;
 }
 
 .modal__input {
@@ -92,6 +93,7 @@
   border: 1px solid #21212166;
   border-radius: 8px;
   font-size: 16px;
+  line-height: 100%;
 }
 
 .modal__input:hover {
