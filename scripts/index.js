@@ -41,7 +41,7 @@ const editProfileNameInput = editProfileModal.querySelector(
 const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
-const profileForm = document.forms["profile-form"];
+const editProfileForm = document.forms["profile-form"];
 const newPostForm = newPostModal.querySelector(".modal__form");
 
 const newPostTitleInput = newPostModal.querySelector("#caption-text-input");
