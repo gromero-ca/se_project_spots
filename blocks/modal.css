@@ -92,8 +92,9 @@
   padding: 14px 16px;
   border: 1px solid #21212166;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 100%;
+  font-weight: 500;
 }
 
 .modal__input:hover {
@@ -155,7 +156,6 @@
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
-    max-height: 336px;
     padding: 12px;
     gap: 24px;
   }
