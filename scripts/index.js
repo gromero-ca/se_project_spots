@@ -52,11 +52,30 @@ const profileDescriptionEl = profile.querySelector(".profile__description");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal_opened")) {
+      closeModal(modal);
+    }
+  });
+});
 
 newPostBtnClose.addEventListener("click", function () {
   closeModal(newPostModal);
@@ -73,6 +92,7 @@ newPostBtnOpen.addEventListener("click", function () {
 editProfileBtnOpen.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
@@ -92,6 +112,7 @@ function handleAddCardSubmit(evt) {
 
   cardsList.prepend(card);
   newPostForm.reset();
+  resetValidation(newPostForm, settings);
   closeModal(newPostModal);
 }
 
