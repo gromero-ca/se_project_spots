@@ -52,15 +52,15 @@ const profileDescriptionEl = profile.querySelector(".profile__description");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", handleEscClose);
+  document.addEventListener("keydown", closeOnEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", handleEscClose);
+  document.removeEventListener("keydown", closeOnEscape);
 }
 
-function handleEscClose(evt) {
+function closeOnEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
     if (openedModal) {
@@ -163,10 +163,6 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
-
-previewModal.addEventListener("click", (e) => {
-  if (e.target === previewModal) closeModal(previewModal);
-});
 
 initialCards.forEach(function (item) {
   const newCard = getCardElement(item);

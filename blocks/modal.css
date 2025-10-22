@@ -113,7 +113,7 @@
 }
 
 .modal__save-btn:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .modal__container_type_preview {

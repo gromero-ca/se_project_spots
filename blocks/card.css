@@ -61,12 +61,6 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.card__delete-icon {
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-}
-
 .card__delete-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
