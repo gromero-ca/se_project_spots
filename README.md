@@ -27,5 +27,6 @@ Spots is a fully responsive web application that showcases a social media-style 
 ## Links
 
 - [Live Demo on GitHub Pages](https://gromero-ca.github.io/se_project_spots/)
-- [Project Video](https://drive.google.com/file/d/1HxfxfEFtm_uq8NxXbj-ixBFjA_q58qMV/view?usp=sharing)
+- [First Video](https://drive.google.com/file/d/1HxfxfEFtm_uq8NxXbj-ixBFjA_q58qMV/view?usp=sharing)
+- [Second Video](https://drive.google.com/file/d/1IMaInL6r8EIlKpjM9tMefExm8da_gm2m/view?usp=sharing)
 - [Figma Design](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
