@@ -126,7 +126,7 @@
   align-items: center;
 }
 
-.modal__container_type_preview .modal__close-btn {
+.modal__close-btn_type_preview {
   position: absolute;
   top: -5px;
   right: 5px;
@@ -134,6 +134,16 @@
   width: 32px;
   padding: 0;
   background-image: url("../images/close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal__close-btn_type_preview:hover {
+  opacity: 0.7;
 }
 
 .modal__image {

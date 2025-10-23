@@ -112,7 +112,11 @@ function handleAddCardSubmit(evt) {
 
   cardsList.prepend(card);
   newPostForm.reset();
-  resetValidation(newPostForm, settings);
+
+  const submitButton = newPostForm.querySelector(settings.submitButtonSelector);
+  submitButton.disabled = true;
+  submitButton.classList.add(settings.inactiveButtonClass);
+
   closeModal(newPostModal);
 }
 
