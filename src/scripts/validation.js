@@ -35,6 +35,8 @@ function setEventListeners(formEl, config) {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
 
+  if (!buttonEl) return;
+
   toggleButtonState(inputList, buttonEl, config);
 
   inputList.forEach((inputEl) => {
@@ -55,6 +57,8 @@ function enableValidation(config) {
 function resetValidation(formEl, config) {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
+
+  if (!buttonEl) return;
 
   inputList.forEach((inputEl) => hideInputError(formEl, inputEl, config));
   toggleButtonState(inputList, buttonEl, config);
