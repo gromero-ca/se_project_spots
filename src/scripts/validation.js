@@ -64,13 +64,4 @@ function resetValidation(formEl, config) {
   toggleButtonState(inputList, buttonEl, config);
 }
 
-const settings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__save-btn",
-  inactiveButtonClass: "modal__button_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
-
-export { enableValidation, resetValidation, settings };
+export { enableValidation, resetValidation };

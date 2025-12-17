@@ -1,15 +1,12 @@
 import "./index.css";
-import {
-  enableValidation,
-  resetValidation,
-  settings,
-} from "../scripts/validation.js";
+import { enableValidation, resetValidation } from "../scripts/validation.js";
+import { settings } from "../utils/constants.js";
 import Api from "../utils/Api.js";
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "61c09a13-0f05-434b-aca9-4642ef697ab8",
+    authorization: process.env.API_TOKEN,
     "Content-Type": "application/json ",
   },
 });
